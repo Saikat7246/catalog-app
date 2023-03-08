@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practice2/screens/catalog.dart';
 import 'package:practice2/screens/login_page.dart';
 import 'package:practice2/signin.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,13 +20,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // is not restarted.
         primarySwatch: Colors.purple,
+        //primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
       // home: CatalogApp(),
       themeMode: ThemeMode.system,
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: ThemeData(brightness: Brightness.light),
       //SignIn(),
       // MyHomePage(title: 'Flutter Demo Home Page'),
-      initialRoute: "/home",
+      initialRoute: "/login",
       routes: {
         "/home": (context) => CatalogApp(),
         "/login": (context) => LoginPage(),
