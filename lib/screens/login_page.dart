@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice2/utils/myroutes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -12,55 +13,61 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Material(
         color: Colors.white,
-        child: Column(
-          children: [
-            Image.asset(
-              "assets/images/Login_image.png",
-              fit: BoxFit.cover,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Welcome',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image.asset(
+                "assets/images/Login_image.png",
+                fit: BoxFit.cover,
               ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-              child: Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Enter Username",
-                      hintText: "User Name",
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'Welcome',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 16.0, horizontal: 32.0),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: "Enter Username",
+                        hintText: "User Name",
+                      ),
                     ),
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: "Enter Password",
-                      hintText: "Password",
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: "Enter Password",
+                        hintText: "Password",
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  ElevatedButton(
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton(
                       onPressed: () {
-                        print('Hii Dear');
+                        Navigator.pushNamed(context, MyRoutes.homeRoutes);
                       },
-                      child: Text('Login'))
-                ],
-              ),
-            )
-          ],
+                      child: Text('Login'),
+                      style: TextButton.styleFrom(
+                        minimumSize: Size(150, 40),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }

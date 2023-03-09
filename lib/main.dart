@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practice2/screens/catalog.dart';
 import 'package:practice2/screens/login_page.dart';
 import 'package:practice2/signin.dart';
+import 'package:practice2/utils/myroutes.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -22,15 +23,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         //primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
-      // home: CatalogApp(),
+      home: LoginPage(),
       themeMode: ThemeMode.system,
       darkTheme: ThemeData(brightness: Brightness.light),
       //SignIn(),
       // MyHomePage(title: 'Flutter Demo Home Page'),
-      initialRoute: "/login",
+      //initialRoute: "/LoginPage",
       routes: {
-        "/home": (context) => CatalogApp(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoutes: (context) => CatalogApp(),
+        MyRoutes.LoginRoutes: (context) => LoginPage(),
       },
     );
   }
