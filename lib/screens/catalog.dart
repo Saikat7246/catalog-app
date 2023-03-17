@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice2/widgets/Drawer.dart';
 
 class CatalogApp extends StatefulWidget {
   const CatalogApp({Key? key}) : super(key: key);
@@ -13,10 +14,9 @@ class _CatalogAppState extends State<CatalogApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Catalog App'),
+        backgroundColor: Colors.deepPurple,
       ),
-      drawer: Drawer(
-        child: Text('data'),
-      ),
+      drawer: MyDrawer(),
       body: Center(
         child: Text('Hello World'),
       ),

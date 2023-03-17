@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(brightness: Brightness.light),
       //SignIn(),
       // MyHomePage(title: 'Flutter Demo Home Page'),
-      //initialRoute: "/LoginPage",
+      initialRoute: MyRoutes.homeRoutes,
       routes: {
         MyRoutes.homeRoutes: (context) => CatalogApp(),
         MyRoutes.LoginRoutes: (context) => LoginPage(),
