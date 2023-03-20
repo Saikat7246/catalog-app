@@ -21,7 +21,10 @@ class MyDrawer extends StatelessWidget {
                 decoration: BoxDecoration(),
                 accountName: const Text("Hii Dear"),
                 accountEmail: Text("abc@gmail.com"),
-                currentAccountPicture: Image.network(imgUrl),
+                currentAccountPicture:
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(imgUrl),
+                    ),
               ),
             ),
             ListTile(

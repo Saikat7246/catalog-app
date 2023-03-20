@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice2/widgets/Drawer.dart';
 
+//learn about context and constrants
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
