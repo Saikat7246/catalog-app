@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:practice2/screens/catalog.dart';
+
+import 'package:practice2/screens/home_page.dart';
 import 'package:practice2/screens/login_page.dart';
 import 'package:practice2/signin.dart';
 import 'package:practice2/utils/myroutes.dart';
+import 'package:practice2/widgets/themes.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -18,19 +20,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // is not restarted.
-        primarySwatch: Colors.purple,
-        //primaryTextTheme: GoogleFonts.latoTextTheme()
-      ),
+
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
+
+      // MyTheme.lightTheme(context),
+      // highContrastDarkTheme: MyTheme.darkTheme(context),
+
+      // theme: ThemeData(
+      //   primarySwatch: Colors.purple,
+      // ),
       home: LoginPage(),
-      themeMode: ThemeMode.system,
-      darkTheme: ThemeData(brightness: Brightness.light),
       //SignIn(),
       // MyHomePage(title: 'Flutter Demo Home Page'),
       initialRoute: MyRoutes.homeRoutes,
       routes: {
-        MyRoutes.homeRoutes: (context) => CatalogApp(),
+        MyRoutes.homeRoutes: (context) => HomePage(),
         MyRoutes.LoginRoutes: (context) => LoginPage(),
       },
     );

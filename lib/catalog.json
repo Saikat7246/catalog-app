@@ -1,0 +1,36 @@
+{
+    "products":[
+    {
+        "id": "Catalog001",
+        "name": "iphone 12 pro",
+        "desc": "Apple iPhone 12th generation",
+        "price": "999",
+        "color": "#33505a",
+        "image": "https://i.pinimg.com/564x/de/77/de/de77deab31779bc4ed3fae38062fc27f.jpg"
+    },
+    {
+        "id": "Catalog002",
+        "name": "iphone 11 pro",
+        "desc": "Apple iPhone 12th generation",
+        "price": "665",
+        "color": "#33505a",
+        "image": "https://i.pinimg.com/564x/e4/b9/70/e4b9707401752b1906db403363a145a8.jpg"
+    },
+    {
+        "id": "Catalog003",
+        "name": "Google Pixel 3",
+        "desc": "Google Pixel  12th generation",
+        "price": "999",
+        "color": "#33505a",
+        "image": "https://i.pinimg.com/564x/d9/41/6b/d9416b2638da7f403fe4c5862f333739.jpg"
+    },
+    {
+        "id": "Catalog004",
+        "name": "iphone ",
+        "desc": "Apple iPhone ",
+        "price": "329",
+        "color": "#33505a",
+        "image": "https://i.pinimg.com/564x/2c/e0/58/2ce058985ac2e2ff2378f366936f2fa6.jpg"
+    }
+]
+}
